@@ -1,6 +1,7 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import StoreProvider from "@/app/StoreProvider";
+import AuthModal from "@/components/AuthModal";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({ 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
             <body className={`${jakarta.className} antialiased text-slate-800 bg-white`}>
                 <StoreProvider>
                     <Toaster position="top-right" />
+                    <AuthModal />
                     {children}
                 </StoreProvider>
             </body>
